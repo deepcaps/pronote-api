@@ -83,12 +83,12 @@ class get_elements():
 			if connection.login(username, password, link):
 				# Go to "Notes" page
 				time.sleep(3)
-				driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[1]/div/div[3]/div[1]/div[3]/ul/li[3]/div[1]").click()
-				webdriver.ActionChains(driver).move_by_offset(0,0).perform()
+				driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[1]/div/div[3]/div[1]/div[3]/ul/li[3]/div[1]").click()   # Notes categorie
+				webdriver.ActionChains(driver).move_by_offset(0,0).perform()   # Change position (close contextuel menu)
 
 				# Get moyenne
 				time.sleep(3)
-				moyenne = driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span")
+				moyenne = driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/span/span")   # Span student moyenne
 
 				return moyenne.text   # Return student moyenne
 
@@ -100,24 +100,36 @@ class get_elements():
 			if connection.login(username, password, link):
 				# Go to "Notes" page
 				time.sleep(3)
-				driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[1]/div/div[3]/div[1]/div[3]/ul/li[3]/div[1]").click()
-				webdriver.ActionChains(driver).move_by_offset(0,0).perform()
+				driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[1]/div/div[3]/div[1]/div[3]/ul/li[3]/div[1]").click()   # Notes categorie
+				webdriver.ActionChains(driver).move_by_offset(0,0).perform()   # Change position (close contextuel menu)
 
 				# Get moyenne
 				time.sleep(3)
-				moyenne = driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[2]/span/span")
+				moyenne = driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[2]/div/div/div[2]/span/span")   # Span classrooom moyenne
 
 				return moyenne.text   # Return classroom moyenne
+	
+	def matter_moyenne(username, password, link):
+		"""
+		pass
+		"""
+		matters = ["MATHEMATIQUES", "ANGLAIS LV1", "ESPAGNOL LV2", "ARTS PLASTIQUES", "SVT"]
+		notes = []
+		if connection.drivers():
+			if connection.login(username, password, link):
+				# Go to "Notes" page
+				time.sleep(3)
+				driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[1]/div/div[3]/div[1]/div[3]/ul/li[3]/div[1]").click()   # Notes categorie
+				webdriver.ActionChains(driver).move_by_offset(0,0).perform()   # Change position (close contextuel menu)
 
-
-
-# /html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div[2]/article/div/div/div/div[2]
-# /html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/
-# /html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div[9]/article/div/div/div/div[2]
-# 
-# /html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div[14]/article/div/div/div/div[2]
-
-# (for) pour tout les "div" dans "/html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]":
-# 	verifier si le "div[nbr].text" existent dans la "liste des matières" (contenant tout les nom de matiere qui existe (format pronote)):
-#		si oui ==> /html/body/div[4]/div[1]/div[2]/table/tbody/tr/td[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div[**nbr**]/article/div/div/div/div[1] = moyenne de la matiere
-#		si non ==> passer au div suivant
+				i = 0
+				try:
+					while True:
+						div = driver.find_element_by_xpath('//*[@id="GInterface.Instances[2].Instances[1]_1_' + str(i) +'_div"]/div/div/div/div[2]')
+						for element in matters:
+							if div.text == element:
+								note = driver.find_element_by_xpath('//*[@id="GInterface.Instances[2].Instances[1]_1_' + str(i) +'_div"]/div/div/div/div[1]')
+								notes.append(note.text)
+						i = i + 1
+				except:
+					return notes

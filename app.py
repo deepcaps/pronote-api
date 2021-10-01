@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, json, request, render_template, jsonify
 from get_elements import get_elements
 
 
@@ -33,6 +33,17 @@ def classroom_moyenne():
 	return jsonify(
 		classroom_moyenne=moyenne
 		)
+
+@app.route('/matter_moyenne')
+# http://<server_ip>/matter_moyenne?username=<username>&password=<password>&link=<link>
+def matter_moyenne():
+	username = request.args.get('username', default=None, type=str)
+	password = request.args.get('password', default=None, type=str)
+	link = request.args.get('link', default=None, type=str)
+
+	notes = get_elements.matter_moyenne(username, password, link)
+
+	return jsonify(notes)
 
 
 if __name__ == "__main__":
