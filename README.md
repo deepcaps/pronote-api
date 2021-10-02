@@ -39,7 +39,7 @@ pass ==> installation locale
 
 
 # A savoir
-pass ==> données de connection non enregistrer,...
+pass ==> données de connection non enregistrer, librairies,...
 
 # Infos
 [![MAINTENED](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/deepcaps/pronote-api/)
