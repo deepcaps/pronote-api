@@ -1,8 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+pass
+"""
+
+__authors__ = "deepcaps"
+__contact__ = "deepcaps@outlook.com"
+__version__ = "1.0"
+__copyright__ = "deepcaps"
+__date__ = "None"
+
 from flask import Flask, json, request, render_template, jsonify
 from get_elements import get_elements
 
-
 app = Flask(__name__, template_folder='templates')
+
 
 @app.route('/')
 def main():
@@ -47,4 +60,4 @@ def matter_moyenne():
 
 
 if __name__ == "__main__":
-	app.run()
+	app.run(host="0.0.0.0", port="8000")
