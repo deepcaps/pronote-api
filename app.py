@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-pass
-"""
-
 __authors__ = "deepcaps"
 __contact__ = "deepcaps@outlook.com"
 __version__ = "1.0"
 __copyright__ = "deepcaps"
-__date__ = "None"
 
 from flask import Flask, json, request, render_template, jsonify
 from get_elements import get_elements

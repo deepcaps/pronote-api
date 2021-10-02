@@ -1,17 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""
-pass
-"""
-
 __authors__ = "deepcaps"
 __contact__ = "deepcaps@outlook.com"
 __version__ = "1.0"
 __copyright__ = "deepcaps"
-__date__ = "None"
 
-# Import library
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
@@ -19,13 +13,7 @@ import platform
 
 
 class connection():
-	"""
-	pass
-	"""
 	def drivers():
-		"""
-		pass
-		"""
 		global driver
 		if platform.system() == "Windows":   # If system is Windows
 			options = Options()
@@ -49,9 +37,6 @@ class connection():
 		return True
 
 	def login(username, password, link):
-		"""
-		pass
-		"""
 		try:
 			driver.get(link)   # get link
 		except:
@@ -72,13 +57,7 @@ class connection():
 		return True
 
 class get_elements():
-	"""
-	pass
-	"""
 	def student_moyenne(username, password, link):
-		"""
-		pass
-		"""
 		if connection.drivers():
 			if connection.login(username, password, link):
 				# Go to "Notes" page
@@ -93,9 +72,6 @@ class get_elements():
 				return moyenne.text   # Return student moyenne
 
 	def classroom_moyenne(username, password, link):
-		"""
-		pass
-		"""
 		if connection.drivers():
 			if connection.login(username, password, link):
 				# Go to "Notes" page
@@ -110,9 +86,6 @@ class get_elements():
 				return moyenne.text   # Return classroom moyenne
 	
 	def matter_moyenne(username, password, link):
-		"""
-		pass
-		"""
 		matters = ["MATHEMATIQUES", "ANGLAIS LV1", "ESPAGNOL LV2", "ARTS PLASTIQUES", "SVT"]
 		notes = {}
 		if connection.drivers():
