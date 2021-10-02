@@ -19,7 +19,7 @@ Si tout les arguments son entrés correctements, le serveur enverra une réponse
 
 ![json](./images/json.png)
 
-... sinon une erreur de type `Internal serveur error: 500` sera renvoyée
+... sinon une erreur de type `Internal serveur error: 500` ou `null` sera renvoyée
 
 ![500error](./images/500error.png)
 
