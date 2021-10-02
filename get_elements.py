@@ -33,8 +33,8 @@ class connection():
 			options.add_argument('--disable-gpu')
 			options.add_argument('--no-sandbox')
 
-			driver = webdriver.Chrome(executable_path="chromedriver.exe")
-			# driver = webdriver.Chrome(executable_path="chromedriver.exe", chrome_options=options)
+			# driver = webdriver.Chrome(executable_path="chromedriver.exe")
+			driver = webdriver.Chrome(executable_path="chromedriver.exe", chrome_options=options)
 			print ("driver: windows")
 		elif platform.system() == "Linux" or platform.system() == "Darwin":   # If system is Linux or MacOS
 			options = Options()
