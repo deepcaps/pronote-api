@@ -10,4 +10,4 @@ unofficial pronote api
 
 # Infos
 [![MAINTENED](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/deepcaps/pronote-api/)
-[![WEBSITE](https://img.shields.io/website-up-down-green-red/https/heroku.com)](https://heroku.com/)
+[![WEBSITE](https://img.shields.io/website-up-down-green-red/https/deepcaps-pronote-api.herokuapp.com)](https://deepcaps-pronote-api.herokuapp.com/)
