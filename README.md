@@ -35,7 +35,23 @@ Pour avoir la moyenne de la classe: `http://deepcaps-pronote-api.herokuapp.com/c
 Les infos supplementaires sur les requetes sont ici : `https://deepcaps-pronote-api.herokuapp.com/`
 
 ## Local
-pass ==> installation locale
+Pour executer le projet sur votre machine local, il suffit de telecharger le repository avec
+
+`git clone ...`
+
+> Il faut aussi installer python et les librairies necessaire au fonctionnement du programme avec la commande `pip install -r requirements.txt`
+
+puis pour executer le programme il y deux solution, la première pour qu'il soit accessible par votre machine seulement avec l'ip *127.0.0.1:5000*
+
+`flaks run`
+
+et la deuxième qui permet que l'application soit accessible par tout votre reseau local avec l'ip de votre machine et le port *8000* (example: *192.168.0.25:8000*)
+
+`python app.py`
+
+> pour trouver l'ip local de votre machine, sous windows `ipconfig`, et sous linux `ifconfig`
+
+![FLASK](./images/flaskrun)
 
 
 # A savoir
