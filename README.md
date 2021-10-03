@@ -43,6 +43,8 @@ Pour executer le projet sur votre machine local, il suffit de telecharger le rep
 
 > Il faut aussi installer les librairies necessaire au fonctionnement du programme avec la commande `pip install -r requirements.txt`
 
+> ***ATTENTION*** la version de chrome (*chromedriver.exe*) n'est peut etre pas compatible avec votre version de chrome. Pour telecharger la version correspondante, cliquez [ici](https://chromedriver.chromium.org/downloads)
+
 puis pour executer le programme il y deux solution, la première pour qu'il soit accessible par votre machine seulement avec l'ip *127.0.0.1:5000*
 
 `flaks run`
@@ -59,11 +61,38 @@ Si tout ce passe bien vous devriez avoir un message similaire:
 
 
 # A savoir
-pass ==> données de connection non enregistrer, librairies,...
+Le projet est une api ***NON OFFICIEL*** crée par **@deepcaps** et ebergé gratuitement par la plateforme [heroku](https://heroku.com/).
+
+Aucune donnés de connexion à pronote n'est enregistrée par le serveur.
+
+Les librairies utilisées sont:
+- Flask
+- selenium
+- platform
+- time
+
+La version du code ebergé sur *heroku* diffère un peu de celle sur ce repository pour des besoins technique. Le principal changement ce trouve sur la configuration du driver:
+```python
+class connection():
+	def drivers():
+		global driver
+		try:
+			options = Options()
+			options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+			options.add_argument('--headless')
+			options.add_argument('--disable-dev-shm-usage')
+			options.add_argument('--no-sandbox')
+
+			driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
+		except:
+			print ("An error has occurred: impossible to start webdriver")
+			return False
+		return True
+```
 
 
 # Me contacter
-pass ==> me contacter adresse mail
+Vous pouvez me contacter a l'adresse [**deepcaps@outlook.com**](deepcaps@outlook.com) pour me faire parvenir les bugs ou les fonctionnalités à rajouter.
 
 
 # Infos
