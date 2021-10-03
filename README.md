@@ -35,11 +35,13 @@ Pour avoir la moyenne de la classe: `http://deepcaps-pronote-api.herokuapp.com/c
 Les infos supplementaires sur les requetes sont ici : `https://deepcaps-pronote-api.herokuapp.com/`
 
 ## Local
+> [Python](https://www.python.org/) et pip sont requis pour le fonctionnement du programme
+
 Pour executer le projet sur votre machine local, il suffit de telecharger le repository avec
 
-`git clone ...`
+`https://github.com/deepcaps/pronote-api.git`
 
-> Il faut aussi installer python et les librairies necessaire au fonctionnement du programme avec la commande `pip install -r requirements.txt`
+> Il faut aussi installer les librairies necessaire au fonctionnement du programme avec la commande `pip install -r requirements.txt`
 
 puis pour executer le programme il y deux solution, la première pour qu'il soit accessible par votre machine seulement avec l'ip *127.0.0.1:5000*
 
@@ -51,7 +53,9 @@ et la deuxième qui permet que l'application soit accessible par tout votre rese
 
 > pour trouver l'ip local de votre machine, sous windows `ipconfig`, et sous linux `ifconfig`
 
-![FLASK](./images/flaskrun)
+Si tout ce passe bien vous devriez avoir un message similaire:
+
+![FLASK](./images/flaskrun.png)
 
 
 # A savoir
