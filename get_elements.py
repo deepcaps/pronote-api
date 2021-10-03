@@ -86,7 +86,7 @@ class get_elements():
 				return moyenne.text   # Return classroom moyenne
 	
 	def matter_moyenne(username, password, link):
-		matters = ["MATHEMATIQUES", "ANGLAIS LV1", "ESPAGNOL LV2", "ARTS PLASTIQUES", "SVT"]
+		matters = ["PHYSIQUE-CHIMIE", "HISTOIRE-GEOGRAPHIE", "FRANCAIS", "EDUCATION MUSICALE", "MATHEMATIQUES", "ANGLAIS LV1", "ESPAGNOL LV2", "ARTS PLASTIQUES", "PHYSIQUE-CHIMIE", "PHYSIQUE-CHIMIE"]
 		notes = {}
 		if connection.drivers():
 			if connection.login(username, password, link):
