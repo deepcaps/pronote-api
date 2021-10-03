@@ -41,6 +41,11 @@ pass ==> installation locale
 # A savoir
 pass ==> données de connection non enregistrer, librairies,...
 
+
+# Me contacter
+pass ==> me contacter adresse mail
+
+
 # Infos
 [![MAINTENED](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/deepcaps/pronote-api/)
 [![WEBSITE](https://img.shields.io/website-up-down-green-red/https/deepcaps-pronote-api.herokuapp.com)](https://deepcaps-pronote-api.herokuapp.com/)
