@@ -11,7 +11,7 @@ pronote-api
 # How to use ?
 
 ## On your app
-Vous devez juste envoyer une requete sur le serveur `https://deepcaps-pronote-api.herokuapp.com/`
+Vous devez juste envoyer une requete sur le serveur `http://deepcaps-pronote-api.herokuapp.com/`
 
 ![mainhtml](./images/mainhtml.png)
 
@@ -39,7 +39,7 @@ Les infos supplementaires sur les requetes sont ici : `https://deepcaps-pronote-
 
 Pour executer le projet sur votre machine local, il suffit de telecharger le repository avec
 
-`https://github.com/deepcaps/pronote-api.git`
+`git clone https://github.com/deepcaps/pronote-api.git`
 
 > Il faut aussi installer les librairies necessaire au fonctionnement du programme avec la commande `pip install -r requirements.txt`
 
