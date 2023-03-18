@@ -96,5 +96,5 @@ Vous pouvez me contacter a l'adresse [**deepcaps@outlook.com**](deepcaps@outlook
 
 
 # Infos
-[![MAINTENED](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/deepcaps/pronote-api/)
+[![MAINTENED](https://img.shields.io/badge/maintained-no-red.svg)](https://github.com/deepcaps/pronote-api/)
 [![WEBSITE](https://img.shields.io/website-up-down-green-red/https/deepcaps-pronote-api.herokuapp.com)](https://deepcaps-pronote-api.herokuapp.com/)
